@@ -171,6 +171,7 @@ PRODUCT_PACKAGES += \
     lib-rtpcore \
     lib-rtpsl \
     libC2D2 \
+    libc2d30_bltlib \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -470,8 +471,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    vendor/motorola/sm6375-common/proprietary/vendor/etc/media_blair/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_blair/video_system_specs.json \
-    vendor/motorola/sm6375-common/proprietary/vendor/etc/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair.xml \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/media_codecs_performance_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_blair.xml \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/media_profiles_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml \
     vendor/motorola/sm6375-common/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
@@ -642,22 +641,10 @@ PRODUCT_PACKAGES += \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
-    libqc2colorconvertfilter \
-    libqc2filter \
     libqcbor \
     libqcc_file_agent \
     libqcc_sdk \
     libqcci_legacy \
-    libqcodec2_base \
-    libqcodec2_basecodec \
-    libqcodec2_core \
-    libqcodec2_filterbase \
-    libqcodec2_hooks \
-    libqcodec2_mockfilter \
-    libqcodec2_mockqc2filter \
-    libqcodec2_platform \
-    libqcodec2_utils \
-    libqcodec2_v4l2codec \
     libqconfigclient \
     libqdcm-algo \
     libqdcm-json-mode-parser \
@@ -942,3 +929,17 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_COPY_FILES += \
+    vendor/motorola/sm6375-common/proprietary/vendor/etc/media_blair/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_blair/video_system_specs.json \
+    vendor/motorola/sm6375-common/proprietary/vendor/etc/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_blair.xml
+
+PRODUCT_PACKAGES += \
+    libqcodec2_base \
+    libqcodec2_basecodec \
+    libqcodec2_core \
+    libqcodec2_hooks \
+    libqcodec2_mockfilter \
+    libqcodec2_platform \
+    libqcodec2_utils \
+    libqcodec2_v4l2codec
